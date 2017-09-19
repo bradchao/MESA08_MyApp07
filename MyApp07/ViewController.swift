@@ -43,6 +43,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    
     func getImageSizeChange() -> CGSize {
         
         let wRate = imageView.bounds.size.width / imageView.image!.size.width
