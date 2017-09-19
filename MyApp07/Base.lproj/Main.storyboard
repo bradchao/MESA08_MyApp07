@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyApp07" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="04l-Hk-LXq">
+                                <rect key="frame" x="14" y="20" width="347" height="31"/>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="rVI-hF-rsN"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Usx-wF-OEi">
+                                <rect key="frame" x="27" y="58" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchState:" destination="BYZ-38-t0r" eventType="valueChanged" id="mCe-Yt-P5v"/>
+                                </connections>
+                            </switch>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="07G-qM-QOG">
+                                <rect key="frame" x="16" y="89" width="343" height="333.5"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bac-7q-84T"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="07G-qM-QOG" firstAttribute="top" secondItem="Usx-wF-OEi" secondAttribute="bottom" id="2Sp-hH-kEI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="07G-qM-QOG" secondAttribute="trailing" id="5bv-zT-7pg"/>
+                            <constraint firstItem="04l-Hk-LXq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5ze-FW-IQT"/>
+                            <constraint firstItem="07G-qM-QOG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Pvh-TV-dgD"/>
+                            <constraint firstItem="Usx-wF-OEi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="ZlO-d2-ZS8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="04l-Hk-LXq" secondAttribute="trailing" id="Zlq-kM-kIB"/>
+                            <constraint firstItem="07G-qM-QOG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ako-zh-LFz"/>
+                            <constraint firstItem="04l-Hk-LXq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mRU-0q-HlJ"/>
+                            <constraint firstItem="Usx-wF-OEi" firstAttribute="top" secondItem="04l-Hk-LXq" secondAttribute="bottom" constant="8" symbolic="YES" id="tLT-oK-7cD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sView" destination="07G-qM-QOG" id="RoF-80-7JK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>
